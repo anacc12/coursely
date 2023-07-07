@@ -187,7 +187,8 @@ export default {
         },
         async saveLesson() {
             this.isCreating = true;
-            this.lessonData.subject = this.selectedSubject.title;
+            this.lessonData.subject =
+                this.selectedSubject.title || this.previousSubject;
             const res = await this.callApi(
                 "post",
                 "/edit-lesson",

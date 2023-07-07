@@ -71,6 +71,7 @@
 
                     <div
                         class="u-display--flex u-display--flex--col u-display--flex--gap--xsml"
+                        v-if="this.$store.state.course_id == null"
                     >
                         <label class="c-input__label" for="subject"
                             >Subject</label
@@ -78,7 +79,6 @@
                         <b-select
                             class="form-control"
                             v-model="selectedSubject"
-                            v-if="this.$store.state.course_id == null"
                         >
                             <option :value="''" disabled selected>
                                 Select a subject
@@ -194,9 +194,6 @@ export default {
             if (this.lessonData.title.trim() == "")
                 return this.error("Title is required");
 
-            if (this.lessonData.subject.trim() == "")
-                return this.error("Subject is required");
-
             if (this.lessonData.description.trim() == "")
                 return this.error("Description is required");
             else {
@@ -281,6 +278,10 @@ export default {
                 this.course = res2.data[0];
             } else console.log(res2);
         }
+
+        console.log(this.$store.state.course_id);
+
+        console.log(this.course);
     },
 };
 </script>
