@@ -1,0 +1,86 @@
+@import "../css/global.scss";
+
+.c-section {
+    margin: calc($unit * 30) calc($unit * 30);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+    @media only screen and (max-width: 800px) {
+        margin: calc($unit * 25) calc($unit * 15);
+    }
+
+    &--footer {
+        padding: 80px;
+        background-color: $color-primary;
+        color: $white;
+
+        p {
+            max-width: 400px;
+        }
+
+        .line {
+            opacity: .2;
+        }
+    }
+
+    &--color {
+        border-radius: 16px;
+        background-color: #F8F7FD;
+        padding: 80px;
+        margin: calc($unit * 30) 10px;
+
+        @media only screen and (max-width: 800px) {
+            padding: 60px 40px;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: $weight-semibold;
+        text-align: center;
+        max-width: 500px;
+        line-height: 130%;
+    }
+
+    &__description {
+        color: #4E4E55;
+        font-size: 16px;
+        line-height: 150%;
+        max-width: 500px;
+        text-align: center;
+    }
+
+    &--triple {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+
+        &--center {
+            align-items: center;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            flex-direction: row;
+        }
+    }
+
+    &__image {
+        &--lrg {
+            width: 80%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        &--xlrg {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    }
+}

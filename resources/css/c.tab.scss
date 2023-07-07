@@ -1,0 +1,41 @@
+@import "../css/global.scss";
+
+.c-tab {
+    padding: 0px 20px 8px 20px;
+    border-bottom: 1px solid #EDEDED;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+        border-bottom: 1px solid #661AE2;
+
+        p {
+            transition: all .2s ease-in-out;
+            color: $color-primary;
+        }
+    }
+
+    p {
+        color: #a19bac;
+        font-size: 13px;
+        font-weight: $weight-regular;
+        transition: all .2s ease-in-out;
+    }
+
+    &--active {
+        border-bottom: 1px solid #661AE2;
+
+        p {
+            color: $color-primary;
+            font-size: 13px;
+            font-weight: $weight-medium;
+        }
+    }
+
+    &__container {
+        display: flex;
+        gap: 0px;
+        align-items: flex-end;
+    }
+}

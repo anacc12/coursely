@@ -1,0 +1,33 @@
+@import "../css/global.scss";
+
+.c-login {
+
+    &__decor {
+        width: 100%;
+        height: 220px;
+        background-color: $color-primary;
+    }
+
+    &__content {
+        padding: calc($unit * 5);
+        background-color: $white;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 110px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        text-align: center;
+        max-width: 350px;
+        border-radius: 10px;
+        border: 1.5px solid rgba(98, 49, 178, 0.10);
+
+        &.register {
+            top: 80px;
+        }
+    }
+}

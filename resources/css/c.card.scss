@@ -1,0 +1,184 @@
+@import "../css/global.scss";
+
+.c-card {
+
+    &--base {}
+
+    &__check {
+        width: 16px;
+        height: 16px;
+        border-radius: 100px;
+        border: 1px solid rgba(98, 49, 178, 0.30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .2s ease-in-out;
+
+
+        &::hover {
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+
+        }
+
+        &::before {
+            content: url("../js/assets/tick.svg");
+            display: none;
+            scale: .8;
+        }
+
+    }
+
+    &--center {
+        align-items: center;
+    }
+
+
+    &--primary,
+    &--secondary,
+    &--tertiary {
+        display: flex;
+        padding: calc($unit * 4);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc($unit * 3);
+
+        border-radius: calc($unit * 2);
+        border: 1.5px solid rgba(98, 49, 178, 0.10);
+        background: $white;
+    }
+
+    &--secondary {
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            border: 1.5px solid $color-primary;
+
+            .c-card__check {
+                transition: all .2s ease-in-out;
+                border: 1px solid $color-primary;
+            }
+        }
+    }
+
+    &--active {
+        border: 1.5px solid $color-primary;
+        background: #F9F6FE;
+
+        .c-card__check {
+            border: 1px solid $color-primary;
+            background-color: $color-primary;
+
+            &::before {
+                content: url("../js/assets/tick.svg");
+                display: block;
+                scale: .8;
+            }
+        }
+    }
+
+    &--tertiary {
+        background: #F9F6FE;
+    }
+
+    img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: calc($unit * 2);
+    }
+
+    &__tag {
+        display: flex;
+        padding: 1px 6px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        border: 1px solid rgba(102, 26, 226, 0.20);
+        background: rgba(102, 26, 226, 0.08);
+
+        color: $color-primary;
+        font-size: 11px;
+        height: fit-content;
+        font-weight: $weight-medium;
+
+        &--lrg {
+            font-size: 15px;
+            padding: 4px 12px;
+        }
+    }
+
+    &--success,
+    &--ghost {
+        border-radius: calc($unit * 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+
+
+        padding: calc($unit * 6);
+        background-color: #F9F6FE;
+
+        &__img {}
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            text-align: center;
+
+            &__title {
+                font-size: 18px;
+                font-weight: $weight-medium;
+                color: $color-primary;
+            }
+        }
+    }
+
+    &--ghost {
+        background-color: white;
+    }
+
+    &--fail {
+        border-radius: calc($unit * 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        flex-direction: column;
+        gap: 24px;
+
+        padding: calc($unit * 6);
+        background-color: #fff1f7;
+
+        &__img {}
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            text-align: center;
+
+            &__title {
+                font-size: 18px;
+                font-weight: $weight-medium;
+                color: #e10053;
+            }
+        }
+    }
+
+
+    &__image {
+        width: 100%;
+        height: 80px;
+        object-fit: cover;
+    }
+}

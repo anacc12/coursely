@@ -1,0 +1,192 @@
+<template>
+    <div>
+        <div class="c-login__decor"></div>
+        <div class="c-login__content register">
+            <router-link to="/">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="134"
+                    height="32"
+                    class="c-logo"
+                    fill="none"
+                >
+                    <rect
+                        width="30"
+                        height="30"
+                        x="1"
+                        y="1"
+                        fill="#fff"
+                        rx="7"
+                    />
+                    <path
+                        fill="#661AE2"
+                        d="M16.264 22.816c-3.595 0-5.827-2.548-5.827-6.653 0-4.122 2.223-6.662 5.818-6.662 2.883 0 5.106 1.88 5.37 4.526h-2.232c-.317-1.52-1.538-2.504-3.138-2.504-2.153 0-3.498 1.775-3.498 4.631 0 2.866 1.345 4.64 3.507 4.64 1.608 0 2.83-.896 3.137-2.32h2.233c-.299 2.593-2.444 4.342-5.37 4.342Z"
+                    />
+                    <rect
+                        width="30"
+                        height="30"
+                        x="1"
+                        y="1"
+                        stroke="#661AE2"
+                        stroke-width="2"
+                        rx="7"
+                    />
+                    <path
+                        fill="#131313"
+                        d="M55.243 13.703h-2.437a3.728 3.728 0 0 0-.524-1.375 3.848 3.848 0 0 0-.937-1.008 4.039 4.039 0 0 0-1.242-.625 4.85 4.85 0 0 0-1.446-.21c-.922 0-1.747.231-2.476.695-.724.463-1.297 1.143-1.72 2.039-.416.896-.624 1.99-.624 3.281 0 1.302.208 2.401.625 3.297.422.896.997 1.573 1.726 2.031.73.459 1.55.688 2.461.688.506 0 .985-.068 1.438-.203a4.14 4.14 0 0 0 1.242-.618 3.74 3.74 0 0 0 1.477-2.351l2.437.008a6.527 6.527 0 0 1-.758 2.171 5.994 5.994 0 0 1-1.43 1.704 6.467 6.467 0 0 1-1.984 1.101 7.34 7.34 0 0 1-2.437.39c-1.386 0-2.62-.327-3.703-.984-1.084-.661-1.938-1.606-2.563-2.836-.62-1.229-.93-2.695-.93-4.398 0-1.708.313-3.175.938-4.398.625-1.23 1.48-2.172 2.563-2.829 1.083-.661 2.315-.992 3.695-.992.849 0 1.64.123 2.375.367A6.27 6.27 0 0 1 53 9.711a5.845 5.845 0 0 1 1.46 1.703c.386.667.647 1.43.782 2.29ZM63 24.743c-1.125 0-2.107-.259-2.945-.774-.839-.516-1.49-1.237-1.953-2.164-.464-.927-.696-2.01-.696-3.25 0-1.245.232-2.334.696-3.266.463-.932 1.114-1.656 1.953-2.172.838-.515 1.82-.773 2.945-.773 1.125 0 2.107.258 2.945.773.839.516 1.49 1.24 1.953 2.172.464.932.696 2.02.696 3.266 0 1.24-.232 2.323-.696 3.25-.463.927-1.114 1.648-1.953 2.164-.838.515-1.82.773-2.945.773Zm.008-1.962c.729 0 1.333-.192 1.812-.578.48-.385.834-.898 1.063-1.539.234-.64.351-1.346.351-2.117 0-.766-.117-1.469-.351-2.11-.23-.645-.584-1.164-1.063-1.554-.479-.39-1.083-.586-1.812-.586-.734 0-1.344.195-1.828.586-.48.39-.836.909-1.07 1.555a6.221 6.221 0 0 0-.344 2.109c0 .77.114 1.476.343 2.117.235.64.592 1.154 1.07 1.54.485.384 1.095.577 1.829.577Zm15.795-3.258V12.5h2.343v12H78.85v-2.078h-.125a3.744 3.744 0 0 1-1.329 1.601c-.604.422-1.356.633-2.257.633-.771 0-1.453-.169-2.047-.508-.589-.343-1.052-.851-1.39-1.523-.334-.672-.5-1.503-.5-2.492V12.5h2.335v7.352c0 .817.227 1.468.68 1.953.453.484 1.041.726 1.765.726.438 0 .873-.11 1.305-.328.438-.219.8-.55 1.086-.992.292-.443.435-1.005.43-1.688Zm5.482 4.977v-12h2.258v1.906h.125a2.9 2.9 0 0 1 1.156-1.523 3.309 3.309 0 0 1 1.89-.563 10 10 0 0 1 .993.055v2.234a4.188 4.188 0 0 0-.5-.086 4.78 4.78 0 0 0-.719-.054c-.552 0-1.044.117-1.476.351a2.613 2.613 0 0 0-1.39 2.352V24.5h-2.337Zm17.436-9.07-2.117.375a2.508 2.508 0 0 0-.422-.774 2.087 2.087 0 0 0-.766-.601c-.323-.157-.727-.235-1.21-.235-.662 0-1.214.149-1.657.446-.443.291-.664.669-.664 1.132 0 .401.148.724.445.97.297.244.776.445 1.438.6l1.906.438c1.104.256 1.927.649 2.469 1.18.541.531.812 1.221.812 2.07 0 .719-.208 1.36-.625 1.922-.411.557-.987.995-1.726 1.313-.735.317-1.586.476-2.555.476-1.344 0-2.44-.286-3.29-.86-.848-.577-1.369-1.398-1.562-2.46l2.258-.344c.14.589.43 1.034.867 1.336.438.297 1.008.445 1.711.445.766 0 1.378-.159 1.836-.476.459-.323.688-.716.688-1.18 0-.375-.141-.69-.422-.945-.276-.255-.7-.448-1.274-.578l-2.03-.446c-1.12-.255-1.949-.661-2.485-1.218-.531-.558-.797-1.263-.797-2.118 0-.708.198-1.328.594-1.859.395-.531.942-.945 1.64-1.242.698-.302 1.498-.453 2.399-.453 1.297 0 2.317.281 3.062.844.745.557 1.237 1.304 1.477 2.242Zm7.974 9.312c-1.182 0-2.2-.252-3.054-.758a5.137 5.137 0 0 1-1.969-2.148c-.458-.927-.688-2.013-.688-3.258 0-1.229.23-2.312.688-3.25.463-.937 1.109-1.67 1.937-2.195.834-.526 1.808-.79 2.922-.79.677 0 1.334.113 1.969.337a4.77 4.77 0 0 1 1.711 1.054c.505.48.904 1.102 1.195 1.868.292.76.438 1.684.438 2.773v.828h-9.539v-1.75h7.25c0-.614-.125-1.159-.375-1.633a2.836 2.836 0 0 0-1.055-1.133c-.448-.275-.974-.414-1.578-.414-.656 0-1.229.162-1.719.485a3.257 3.257 0 0 0-1.125 1.25c-.26.51-.39 1.065-.39 1.664v1.367c0 .802.14 1.484.421 2.047.287.562.685.992 1.196 1.289.51.292 1.106.438 1.789.438a3.72 3.72 0 0 0 1.211-.188 2.499 2.499 0 0 0 1.554-1.523l2.211.398a3.995 3.995 0 0 1-.953 1.71c-.453.485-1.023.863-1.711 1.134-.682.265-1.461.398-2.336.398ZM119.771 8.5v16h-2.336v-16h2.336ZM124.39 29c-.349 0-.667-.029-.953-.086-.287-.052-.5-.11-.641-.172l.562-1.914c.427.115.808.164 1.141.149.333-.016.628-.141.883-.375.26-.235.489-.618.687-1.149l.289-.797-4.39-12.156h2.5l3.039 9.313h.125l3.039-9.313h2.508l-4.946 13.602c-.229.625-.52 1.153-.875 1.585a3.4 3.4 0 0 1-1.265.985c-.49.219-1.058.328-1.703.328Z"
+                    />
+                </svg>
+            </router-link>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="1"
+                fill="none"
+                class="u-mt--sml--4 u-mb--sml--4"
+            >
+                <path stroke="#F1EFFB" d="M0 .5h1333" />
+            </svg>
+
+            <div
+                class="u-display--flex u-display--flex--gap--sml u-display--full"
+            >
+                <div
+                    class="u-display--flex u-display--flex--col u-display--flex--gap--xsml u-type--left u-display--flex--ai--start u-display--full"
+                >
+                    <label class="c-input__label" for="firstName"
+                        >First name</label
+                    >
+                    <b-form-input v-model="userData.firstName"></b-form-input>
+                </div>
+
+                <div
+                    class="u-display--flex u-display--flex--col u-display--flex--gap--xsml u-type--left u-display--flex--ai--start u-display--full"
+                >
+                    <label class="c-input__label" for="lastName"
+                        >Last name</label
+                    >
+                    <b-form-input v-model="userData.lastName"></b-form-input>
+                </div>
+            </div>
+
+            <div
+                class="u-display--flex u-display--flex--col u-display--flex--gap--xsml u-type--left u-display--flex--ai--start u-display--full"
+            >
+                <label class="c-input__label" for="email">Email</label>
+                <b-form-input
+                    type="email"
+                    v-model="userData.email"
+                ></b-form-input>
+            </div>
+
+            <div
+                class="u-display--flex u-display--flex--col u-display--flex--gap--xsml u-type--left u-display--flex--ai--start u-display--full"
+            >
+                <label class="c-input__label" for="password">Password</label>
+                <b-form-input
+                    type="password"
+                    v-model="userData.password"
+                ></b-form-input>
+            </div>
+            <div
+                class="u-display--flex u-display--flex--col u-display--flex--gap--xsml u-type--left u-display--flex--ai--start u-display--full"
+            >
+                <label class="c-input__label" for="password">Role</label>
+                <div class="role">
+                    <b-form-group v-slot="{ ariaDescribedby }">
+                        <b-form-radio-group
+                            class="btns"
+                            id="btn-radios"
+                            v-model="userData.role"
+                            :options="roles"
+                            :aria-describedby="ariaDescribedby"
+                            button-variant="outline-primary"
+                            size="lg"
+                            name="radio-btn-outline"
+                            buttons
+                            plain
+                        ></b-form-radio-group>
+                    </b-form-group>
+                </div>
+            </div>
+
+            <Button
+                @click="register"
+                :disabled="isLogging"
+                :loading="isLogging"
+                class="c-btn c-btn--primary c-btn--sml u-display--full u-mt--sml--1"
+            >
+                Register
+            </Button>
+
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="1"
+                fill="none"
+                class="u-mt--sml--4 u-mb--sml--4"
+            >
+                <path stroke="#F1EFFB" d="M0 .5h1333" />
+            </svg>
+
+            <p class="u-type--sml">Already have an account?</p>
+            <router-link to="/login">
+                <Button class="c-btn c-btn--sml c-btn--outline">Log in</Button>
+            </router-link>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            userData: {
+                firstName: "",
+                lastName: "",
+                email: "",
+                password: "",
+                role: "",
+            },
+            isLogging: false,
+            rolesList: [],
+            roles: [
+                { text: "Student", value: "Student" },
+                { text: "Professor", value: "Professor" },
+            ],
+        };
+    },
+    methods: {
+        async register() {
+            this.isLogging = true;
+            const res = await this.callApi("post", "/register", this.userData);
+            if (res.status === 200) {
+                this.success("Registered successfully");
+                setTimeout(function () {
+                    window.location = "/";
+                }, 1500);
+            } else {
+                if (res.status === 422) {
+                    if (res.data.errors.firstName) {
+                        this.error(res.data.errors.firstName[0]);
+                    }
+                    if (res.data.errors.lastName) {
+                        this.error(res.data.errors.lastName[0]);
+                    }
+                    if (res.data.errors.email) {
+                        this.error(res.data.errors.email[0]);
+                    }
+                    if (res.data.errors.password) {
+                        this.error(res.data.errors.password[0]);
+                    }
+                } else {
+                    this.swr(res.data.message);
+                }
+            }
+            this.isLogging = false;
+        },
+    },
+};
+</script>
+
+<style lang="scss" scoped></style>

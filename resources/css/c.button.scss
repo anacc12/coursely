@@ -1,0 +1,200 @@
+@import "../css/global.scss";
+
+.c-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: calc($unit * 2);
+    font-weight: $weight-medium;
+
+    &--base {
+        padding: calc($unit * 3) calc($unit * 5);
+        font-size: 13px;
+    }
+
+    &--sml {
+        padding: calc($unit * 2) calc($unit * 4);
+        font-size: 12px;
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    &--primary {
+        background-color: $color-primary;
+        color: $white;
+
+        &:hover {
+            background-color: #43168c !important;
+            color: $white !important;
+        }
+    }
+
+    &--disabled {
+        background-color: #E9E6EE !important;
+        cursor: unset !important;
+        flex: unset;
+
+        span {
+            color: #807694 !important;
+        }
+
+        &:hover {
+            border-radius: 6px;
+            background-color: #E9E6EE !important;
+            cursor: unset;
+
+            span {
+                color: #807694 !important;
+            }
+
+
+        }
+    }
+
+    &--nav {
+        color: #5E5E5E;
+        text-align: center;
+        font-size: 13px;
+        font-weight: $weight-medium;
+        border: 1px solid transparent !important;
+        background-color: transparent !important;
+        padding: 0px !important;
+        position: relative;
+
+        &:before {
+            display: none;
+            content: '';
+            width: 0px;
+            height: 0px;
+        }
+
+        &--active {
+            color: $color-primary;
+
+            span {
+                svg {
+                    filter: brightness(0) saturate(100%) invert(19%) sepia(97%) saturate(2943%) hue-rotate(258deg) brightness(83%) contrast(119%);
+                }
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: -21px;
+                top: -4px;
+                width: 4px;
+                height: 28px;
+                border-radius: 0px 4px 4px 0px;
+                background: #661AE2;
+                box-shadow: 3px 1px 10px 0px rgba(144, 91, 230, 0.7)
+            }
+        }
+
+        &:hover {
+            color: $color-primary !important;
+
+            span {
+                svg {
+                    filter: brightness(0) saturate(100%) invert(19%) sepia(97%) saturate(2943%) hue-rotate(258deg) brightness(83%) contrast(119%);
+                }
+            }
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    &--anchor {
+        color: #5E5E5E;
+        text-align: center;
+        font-size: 13px;
+        font-weight: $weight-medium;
+        border: 1px solid transparent !important;
+        background-color: transparent !important;
+        padding: 0px !important;
+        position: relative;
+
+        &--active {
+
+            color: $color-primary;
+
+            span {
+                border-bottom: 1px solid $color-primary;
+
+                svg {
+                    filter: brightness(0) saturate(100%) invert(19%) sepia(97%) saturate(2943%) hue-rotate(258deg) brightness(83%) contrast(119%);
+                }
+            }
+        }
+
+        span {
+            border-bottom: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &:hover {
+            color: $color-primary !important;
+
+            span {
+                border-bottom: 1px solid $color-primary;
+
+                svg {
+                    filter: brightness(0) saturate(100%) invert(19%) sepia(97%) saturate(2943%) hue-rotate(258deg) brightness(83%) contrast(119%);
+                }
+            }
+        }
+    }
+
+    &--outline {
+        border: 1px solid $color-primary;
+        background: $white;
+        color: $color-primary;
+
+        &::hover {
+            border: 1px solid #43168c !important;
+            background: $white !important;
+            color: #43168c !important;
+        }
+
+        &--negative {
+            border: 1px solid $white;
+            background: transparent;
+            color: $white;
+
+            &:hover {
+                border: 1px solid white !important;
+                background: transparent !important;
+                color: white !important;
+            }
+        }
+
+        &--fail {
+            border: 1px solid #e10053;
+            color: #e10053;
+
+            &:hover {
+                border: 1px solid #e10053 !important;
+                color: #e10053 !important;
+            }
+        }
+    }
+
+    &--negative {
+        background-color: $white;
+        color: $color-primary;
+
+        &:hover {
+            background-color: #fff !important;
+            color: #43168c !important;
+        }
+    }
+}

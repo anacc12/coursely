@@ -1,0 +1,27 @@
+@import "../css/global.scss";
+
+.c-nav {
+    margin: calc($unit * 10) calc($unit * 5);
+
+    &--top {
+        margin: calc($unit * 5);
+    }
+
+    &--aside {
+        position: fixed;
+        display: flex;
+        height: 100vh;
+        padding: calc($unit * 5);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        flex-shrink: 0;
+        border-right: 1px solid #EDEBFA;
+        background: #FCFCFC;
+        box-shadow: 0px 4px 20px 0px rgba(88, 86, 97, 0.01);
+    }
+}
+
+.c-logo {
+    scale: .8;
+}

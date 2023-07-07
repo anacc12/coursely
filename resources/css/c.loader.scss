@@ -1,0 +1,18 @@
+@import "../css/global.scss";
+
+.c-loader {
+
+    height: 4px;
+    background-color: #DBCBF8;
+    position: absolute;
+    width: calc(100% - 229px);
+    left: 229px;
+    top: 0;
+    right: 0;
+
+    &__bar {
+        transition: width .1s ease-in-out;
+        height: 4px;
+        background-color: $color-primary;
+    }
+}

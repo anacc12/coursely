@@ -1,0 +1,64 @@
+@import "../css/global.scss";
+
+.c-container {
+    max-width: 1920px;
+
+    &--home {
+        background-color: $white;
+    }
+
+    &--main {
+        margin: calc($unit * 7);
+        margin-left: 230px + calc($unit*7);
+    }
+
+    &--cards {
+        display: grid;
+        column-gap: 20px;
+        row-gap: 20px;
+        // grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    &--split {
+        display: grid;
+        column-gap: 20px;
+        row-gap: 20px;
+
+        &--3 {
+            grid-template-columns: 1.5fr 3fr 1fr;
+        }
+
+        &--2 {
+            grid-template-columns: 1.5fr 4fr;
+        }
+    }
+
+    &--content {
+        // display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        align-items: flex-start;
+
+        align-self: stretch;
+        border-radius: 16px;
+        background: #FFF;
+    }
+
+    &--aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: calc($unit * 4);
+        border-radius: 14px;
+        border: 1px solid #F4F3FC;
+        background: #FBFBFE;
+        padding: 24px;
+
+        &--secondary {
+            height: fit-content;
+        }
+    }
+}

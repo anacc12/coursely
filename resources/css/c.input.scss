@@ -1,0 +1,73 @@
+@import "../css/global.scss";
+
+.c-input {
+    &__label {
+        color: #8089A1;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 150%;
+    }
+}
+
+.form-control {
+    border: 1px solid #e7e4ef !important;
+    font-size: 13px;
+    border-radius: 6px;
+    padding: 8px 12px;
+
+    &:focus {
+        border-color: $color-primary;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(98, 49, 178, 0.1);
+    }
+}
+
+.btn-outline-primary {
+    border-color: #e7e4ef;
+    background: $white;
+    color: $color-text;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 4px;
+
+    &.active {
+        background: $color-primary;
+        border-color: $color-primary;
+        color: $white;
+    }
+
+    &:hover {
+        background: $color-primary;
+        color: $white;
+    }
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+    padding: calc($unit * 2) calc($unit * 4);
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.multiselect {
+
+    &__option,
+    &__single,
+    &__placeholder,
+    &__input {
+        font-size: 13px;
+    }
+}
+
+.ivu-upload-list {
+    margin: 0px !important;
+}
+
+.ivu-upload.ivu-upload-select {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 8px;
+}
