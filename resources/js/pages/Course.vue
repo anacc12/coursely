@@ -411,7 +411,7 @@ export default {
     methods: {
         downloadPdf(lessonPdf) {
             axios({
-                url: "http://localhost:8000" + lessonPdf, // File URL Goes Here
+                url: "http://localhost:8000" + lessonPdf,
                 method: "GET",
                 responseType: "blob",
             }).then((response) => {

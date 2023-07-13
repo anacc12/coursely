@@ -1,59 +1,104 @@
 <template>
-    <div>
+    <div class="u-display--flex">
         <Nav />
-        <b-container class="">
-            <b-row>
-                <b-col cols="6" class="lessons">
-                    <div class="title-lesson">
-                        <h2>Lesson single</h2>
-                    </div>
-                    <b-row class="lesson-list">
-                        <b-col cols="2">
-                            <div class="grams">
-                                <h2>Title: {{ lesson.title }}</h2>
-                                <div class="pdf">
-                                    <p>{{ lesson.pdf }}</p>
-                                </div>
-                            </div>
-                            <h2 class="lesson">
-                                Subject: {{ lesson.subject }}
-                            </h2>
-                            <p>Description: {{ lesson.description }}</p>
-                        </b-col>
-                    </b-row>
-                </b-col>
-
-                <div class="buttons">
-                    <router-link
-                        v-if="$store.state.user.role != 'Student'"
-                        to="/new-lesson"
-                    >
+        <b-container class="c-container c-container--main">
+            <div>
+                <div
+                    class="title u-display--flex u-display--flex--jc--sb u-display--flex--fill u-display--flex--ai--start"
+                >
+                    <h1 class="u-type u-type--title u-type--title--lrg">
+                        {{ lesson.title }}
+                    </h1>
+                    <div class="u-display--flex u-display--flex--gap--sml">
                         <Button
-                            class="start-btn"
+                            v-if="lesson.pdf != null"
+                            class="c-btn c-btn--sml c-btn--outline"
                             :loading="isCreating"
                             :disabled="isCreating"
+                            @click="downloadPdf()"
                         >
-                            New lesson
+                            Download pdf
                         </Button>
-                    </router-link>
-                    <Button
-                        class="start-btn"
-                        :loading="isCreating"
-                        :disabled="isCreating"
-                        @click="downloadPdf()"
-                    >
-                        Download pdf
-                    </Button>
-                    <router-link
-                        v-if="user_id == lesson.user_id"
-                        v-bind:to="'/edit-lesson/' + this.id"
-                    >
-                        <Button class="login-btn">Edit lesson</Button>
-                    </router-link>
+                        <router-link
+                            v-if="
+                                user_id == lesson.user_id ||
+                                $store.state.user.role == 'Admin'
+                            "
+                            v-bind:to="'/edit-lesson/' + this.id"
+                        >
+                            <Button class="c-btn c-btn--sml c-btn--outline"
+                                >Edit lesson</Button
+                            >
+                        </router-link>
+                        <router-link
+                            v-if="$store.state.user.role != 'Student'"
+                            to="/new-lesson"
+                        >
+                            <Button
+                                class="c-btn c-btn--sml c-btn--primary"
+                                :loading="isCreating"
+                                :disabled="isCreating"
+                            >
+                                New lesson
+                            </Button>
+                        </router-link>
+                    </div>
                 </div>
-            </b-row>
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="100%"
+                    height="1"
+                    fill="none"
+                    class="u-mb--sml--4"
+                >
+                    <path stroke="#F1EFFB" d="M0 .5h1333" />
+                </svg>
+
+                <b-container class="c-container--content">
+                    <h1
+                        class="u-type u-type--title u-type--title--base u-display--flex--fill"
+                    >
+                        Overview
+                    </h1>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="100%"
+                        height="1"
+                        fill="none"
+                    >
+                        <path stroke="#F1EFFB" d="M0 .5h1333" />
+                    </svg>
+
+                    <p class="u-type--title u-type--title--sml u-mb--sml--1">
+                        Subject
+                    </p>
+                    <p class="u-type--base">
+                        {{ lesson.subject }}
+                    </p>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="100%"
+                        height="1"
+                        fill="none"
+                        class="u-mb--sml--4"
+                    >
+                        <path stroke="#F8F7FD" d="M0 .5h1333" />
+                    </svg>
+
+                    <div class="u-mb--sml--4">
+                        <p
+                            class="u-type--title u-type--title--sml u-mb--sml--1"
+                        >
+                            Description
+                        </p>
+                        <p class="u-type--base">
+                            {{ lesson.description }}
+                        </p>
+                    </div>
+                </b-container>
+            </div>
         </b-container>
-        <Footer />
     </div>
 </template>
 
