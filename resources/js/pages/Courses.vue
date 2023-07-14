@@ -99,9 +99,9 @@
                             </div>
                         </div>
 
-                            <p class="u-type--base">
-                                {{ course.description }}
-                            </p>
+                        <p class="u-type--base">
+                            {{ course.description }}
+                        </p>
 
                         <div
                             class="u-display--flex u-display--flex--gap--sml u-display--full"
@@ -169,7 +169,7 @@ export default {
         getProf(course) {
             this.profs.forEach((prof) => {
                 if (prof.id == course.professor_id) {
-                    this.profName = prof.firstName + "" + prof.lastName;
+                    this.profName = prof.firstName + " " + prof.lastName;
                 }
             });
         },
