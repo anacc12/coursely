@@ -380,16 +380,18 @@ export default {
             }
         },
         validateCourse() {
-            if (this.value.length > 0) {
+            if (this.value != null) {
                 this.courseData.lessons = this.value;
 
                 this.courseData.lessons.forEach((lesson) => {
                     this.lesson_ids.push(lesson.id);
                 });
                 this.courseData.lesson_ids = this.lesson_ids;
+
+                console.log(this.courseData.lesson_ids);
             }
 
-            if (this.selectedSubject.length > 0) {
+            if (this.selectedSubject != null) {
                 this.courseData.subject = this.selectedSubject.title;
             }
 

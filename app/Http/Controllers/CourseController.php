@@ -87,7 +87,7 @@ class CourseController extends Controller
 
         $course = Course::where('id', $request->id)->first();
 
-        if (count($request->lessons) > 1) {
+        if (count($request->lessons) > 0) {
             $course->lessons()->sync($request->lesson_ids);
         }
 

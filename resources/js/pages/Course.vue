@@ -332,14 +332,6 @@
                             class="u-display--flex u-display--flex--col u-display--flex--gap--xsml u-display--full"
                         >
                             <p class="u-type--title u-type--title--xsml">
-                                Enrolled at
-                            </p>
-                            <p class="u-type--sml">12.06.2023.</p>
-                        </div>
-                        <div
-                            class="u-display--flex u-display--flex--col u-display--flex--gap--xsml u-display--full"
-                        >
-                            <p class="u-type--title u-type--title--xsml">
                                 Final results
                             </p>
                             <p
